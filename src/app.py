@@ -14,18 +14,24 @@ def main():
         <style>
             body {
                 font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }
+            header {
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-size: 1.8em;
+                font-weight: bold;
+            }
+            .center-container {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                height: 100vh;
-                margin: 0;
-                background-color: #f5f5f5;
-            }
-            h1 {
-                font-size: 2em;
-                font-weight: bold;
-                margin-bottom: 40px;
+                height: calc(100vh - 80px); /* 100% viewport height minus header */
             }
             label {
                 font-size: 1.2em;
@@ -52,12 +58,14 @@ def main():
         </style>
     </head>
     <body>
-        <h1>Forest Fire Tracking App v1.0.0 - MVP</h1>
-        <form action="/echo_user_input" method="POST">
-            <label for="user_input">Please enter a text:</label><br>
-            <input type="text" name="user_input" id="user_input"><br>
-            <input type="submit" value="Submit!">
-        </form>
+        <header>Forest Fire Tracking App v1.0.0 - Bare Minimum</header>
+        <div class="center-container">
+            <form action="/echo_user_input" method="POST">
+                <label for="user_input">Please enter a text:</label><br>
+                <input type="text" name="user_input" id="user_input"><br>
+                <input type="submit" value="Submit!">
+            </form>
+        </div>
     </body>
     </html>
     '''
@@ -70,11 +78,44 @@ def echo_input():
     <html>
     <head>
         <title>Response - Forest Fire App</title>
+        <style>
+            body {{
+                font-family: Arial, sans-serif;
+                margin: 0;
+                padding: 0;
+                background-color: #f5f5f5;
+            }}
+            header {{
+                background-color: #333;
+                color: white;
+                padding: 20px;
+                text-align: center;
+                font-size: 1.8em;
+                font-weight: bold;
+            }}
+            .center-container {{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                height: calc(100vh - 80px);
+                text-align: center;
+            }}
+            a {{
+                margin-top: 20px;
+                color: #4CAF50;
+                text-decoration: none;
+                font-weight: bold;
+            }}
+        </style>
     </head>
     <body>
-        <h2>You entered: {input_text}</h2>
-        <br>
-        <a href="/">Go back</a>
+        <header>Forest Fire Tracking App v1.0.0 - MVP</header>
+        <div class="center-container">
+            <h2>You entered:</h2>
+            <p><strong>{input_text}</strong></p>
+            <a href="/">← Go back</a>
+        </div>
     </body>
     </html>
     '''

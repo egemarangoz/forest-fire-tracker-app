@@ -110,7 +110,7 @@ def echo_input():
         </style>
     </head>
     <body>
-        <header>Forest Fire Tracking App v1.0.0 - MVP</header>
+        <header>Forest Fire Tracking App v1.0.0 - Bare Minimum</header>
         <div class="center-container">
             <h2>You entered:</h2>
             <p><strong>{input_text}</strong></p>

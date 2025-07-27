@@ -116,7 +116,7 @@ soupsieve==2.6
 stack-data==0.6.3
 stanio==0.5.1
 stevedore==5.4.0
-symengine==0.14.0
+symengine==0.13.0
 sympy==1.13.3
 terminado==0.18.1
 threadpoolctl==3.6.0
